@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <div>
+        <h1>Quoted</h1>
+        <div class="mb-3">
+            {% if quote %}
+                <h3>{{ quote.name }} </h3>
+                <h5>({{ quote.symbol }})</h5>
+                <p>Price: {{ quote.price |usd}}</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

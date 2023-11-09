@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #a855f7;
+    --secondary-color: #9333ea;
+    --text-light: #ffffff;
+    background-color: #1b1f24;
+    background: rgb(77, 16, 50);
+    background: radial-gradient(circle, rgba(77, 16, 50, 1) 0%, rgba(27, 31, 36, 1) 100%);
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: var(background-color);
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+}
+
+/* navigation bar */
+nav {
+    position: fixed;
+    width: 100%;
+}
+
+.nav_content {
+    animation: slideRight 1s ease forwards;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1200px;
+    padding: 2rem 2rem;
+}
+
+nav .logo a {
+    color: var(--secondary-color);
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav .logo a:hover {
+    color: var(--primary-color);
+}
+
+/* search bar */
+nav input {
+    display: none;
+}
+
+
+ul {
+    display: flex;
+    transition: left 0.3s;
+    list-style: none;
+}
+
+ul li a {
+    color: var(--text-dark);
+    font-weight: 700;
+    padding: 2rem 2rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    color: var(--primary-color);
+}
+
+
+/* contact */
+.section_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* info contact */
+.subtitle {
+    color: var(text-light);
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+
+}
+
+.title span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+
+/* image profile */
+.image {
+    display: grid;
+    place-items: center;
+}
+
+.image img {
+    border-radius: 50%;
+    width: min(90rem, 90%);
+}
+
+
+/* social media icons */
+.social-media a {
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    display: inline-flex;
+    height: 50px;
+    justify-content: center;
+    margin: 30px 15px 30px 0;
+    text-decoration: none;
+    transition: 0.5s ease;
+    width: 50px;
+}
+
+.social-media a:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    box-shadow: 0 0 20px var(--secondary-color);
+}
+
+
+/* animation */
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Home joke */
+.header {
+    color: var(--secondary-color);
+    font-size: 4rem;
+    padding-bottom: 10px;
+    position: absolute;
+    text-align: center;
+    top: 150px;
+}
+
+.header:hover {
+    color: var(--primary-color);
+}
+
+section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 3rem;
+}
+
+.container p {
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+button {
+    align-self: center;
+    background-color: var(--primary-color);
+    border-radius: 40px;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 4rem;
+    padding: 2rem;
+    text-decoration: none;
+    transition: 0.5s ease;
+    width: fit-content;
+}
+
+button:hover {
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Submit page */
+.bar {
+    align-content: center;
+    align-self: center;
+    padding-bottom: 20px;
+}
+
+#inputField {
+    font-size: 25px;
+    height: 46px;
+    outline: none;
+    vertical-align: middle;
+    width: 700px;
+    color: #1b1f24;
+    border-radius: 8px;
+    border: none;
+}
